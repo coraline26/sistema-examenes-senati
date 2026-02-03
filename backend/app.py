@@ -31,7 +31,7 @@ from models import (
 )
 from database import get_connection
 
-app = Flask(__name__)
+
 CORS(app)
 
 app.config["JWT_SECRET_KEY"] = "super-clave-secreta-123"
@@ -335,5 +335,5 @@ def mostrar_admin():
 # MAIN
 # ------------------------
 if __name__ == "__main__":
-    print(">>> app.py se está ejecutando")
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
