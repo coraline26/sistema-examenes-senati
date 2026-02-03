@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
-from flask import render_template
+from flask import render_template, url_for
 from flask_jwt_extended import (
     JWTManager,
     create_access_token,
@@ -12,10 +12,12 @@ import pandas as pd
 import os
 
 # Esto le dice a Flask que busque las carpetas dentro de la carpeta actual
-current_dir = os.path.dirname(os.path.abspath(__file__))
-app = Flask(__name__, 
-            template_folder=os.path.join(current_dir, 'templates'),
-            static_folder=os.path.join(current_dir, 'static'))
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+app = Flask(__name__,
+            template_folder=os.path.join(base_dir, 'templates'),
+            static_folder=os.path.join(base_dir, 'static'),
+            static_url_path='/static') # Esto asegura que la URL sea /static/archivo
 
 from models import (
     obtener_preguntas_aleatorias,

@@ -29,7 +29,9 @@
 <body>
 
 <div class="login-card">
-    <img src="senati.jpg" class="logo">
+    <img src="{{ url_for('static', filename='senati.jpg') }}" class="logo">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
     <h3> CFP - ILO</h3>
     <h4>Ingreso al Sistema De Evaluaciones</h4>
 
