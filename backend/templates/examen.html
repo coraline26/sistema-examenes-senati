@@ -110,7 +110,7 @@
 
             <div class="col-md-4 d-flex align-items-center">
                 <img src="{{ url_for('static', filename='senati.jpg') }}" class="logo">
-                <script src="{{ url_for('static', filename='script.js') }}"></script>
+                
                 <div>
                     <div class="titulo-senati">SENATI - CFP ILO</div>
                     <div class="subtitulo">Evaluación Virtual</div>
@@ -145,9 +145,15 @@
 </div>
 
 <!-- SCRIPTS -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 <script src="script.js?v=3"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<script>
+    // Pequeño script de seguridad: si no hay token, lo regresa al login
+    if (!localStorage.getItem('token')) {
+        window.location.href = "/";
+    }
+</script>
 
 </body>
 </html>
