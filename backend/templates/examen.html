@@ -109,7 +109,8 @@
         <div class="row align-items-center">
 
             <div class="col-md-4 d-flex align-items-center">
-                <img src="senati.jpg" class="logo me-3">
+                <img src="{{ url_for('static', filename='senati.jpg') }}" class="logo">
+                <script src="{{ url_for('static', filename='script.js') }}"></script>
                 <div>
                     <div class="titulo-senati">SENATI - CFP ILO</div>
                     <div class="subtitulo">Evaluación Virtual</div>

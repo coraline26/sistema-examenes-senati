@@ -34,7 +34,8 @@ from database import get_connection
 
 CORS(app)
 
-app.config["JWT_SECRET_KEY"] = "super-clave-secreta-123"
+app.config["JWT_SECRET_KEY"] = "una-clave-super-larga-y-segura-de-mas-de-32-caracteres"
+#app.config["JWT_SECRET_KEY"] = "super-clave-secreta-123"
 jwt = JWTManager(app)
 
 # ------------------------
@@ -335,5 +336,6 @@ def mostrar_admin():
 # MAIN
 # ------------------------
 if __name__ == "__main__":
+    # Render usa la variable de entorno PORT
     port = int(os.environ.get("PORT", 10000))
     app.run(host='0.0.0.0', port=port)
