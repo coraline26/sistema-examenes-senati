@@ -3,10 +3,10 @@ const API = window.location.origin;
 document.addEventListener("DOMContentLoaded", () => {
     const token = localStorage.getItem("token");
 
-    // 🔐 Protección real
+    // 🔐 Protección real: Corregido para usar la raíz "/" en lugar de index.html
     if (!token) {
         alert("Sesión expirada o acceso inválido");
-        window.location.href = "index.html";
+        window.location.href = "/";
         return;
     }
 
@@ -30,12 +30,14 @@ async function cargarDashboard(token) {
 
         const data = await res.json();
 
-        document.getElementById("total").innerText = data.total;
-        document.getElementById("promedio").innerText = data.promedio;
+        // Aseguramos que los IDs coincidan con el HTML
+        document.getElementById("total").innerText = data.total || 0;
+        document.getElementById("promedio").innerText = data.promedio || 0;
 
         cargarTabla(data.historial);
 
     } catch (error) {
+        console.error("Error en dashboard:", error);
         alert("Sesión expirada o acceso inválido");
         logout();
     }
@@ -46,6 +48,8 @@ async function cargarDashboard(token) {
 ============================ */
 function cargarTabla(datos) {
     const tbody = document.getElementById("tabla");
+    if (!tbody) return;
+    
     tbody.innerHTML = "";
 
     if (!datos || datos.length === 0) {
@@ -65,7 +69,7 @@ function cargarTabla(datos) {
             <td>${d.nombres}</td>
             <td>${d.carrera}</td>
             <td>${d.puntaje}</td>
-            <td>${d.nota}</td>
+            <td><span class="badge ${d.nota >= 10.5 ? 'bg-success' : 'bg-danger'}">${d.nota}</span></td>
             <td>${d.fecha}</td>
         </tr>`;
     });
@@ -124,6 +128,12 @@ async function crearAlumno() {
 
     const data = await res.json();
     alert(data.mensaje);
+    
+    // Limpiar campos tras registrar
+    document.getElementById("dni").value = "";
+    document.getElementById("nombres").value = "";
+    document.getElementById("password").value = "";
+    
     cargarDashboard(token);
 }
 
@@ -132,5 +142,5 @@ async function crearAlumno() {
 ============================ */
 function logout() {
     localStorage.clear();
-    window.location.href = "index.html";
+    window.location.href = "/";
 }
