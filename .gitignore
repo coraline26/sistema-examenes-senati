@@ -1,0 +1,14 @@
+# Entorno virtual
+venv/
+__pycache__/
+*.pyc
+
+# Base de datos local (opcional)
+*.db
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Reportes generados
+backend/reportes/

@@ -1,0 +1,89 @@
+tipo_examen,pregunta,opcion_a,opcion_b,opcion_c,opcion_d,respuesta_correcta
+Electricidad Industrial,¿Cuál es la unidad de medida de la corriente eléctrica?,Voltio,Ohmio,Amperio,Watt,C
+Electricidad Industrial,¿Qué instrumento se utiliza para medir voltaje?,Amperímetro,Ohmímetro,Voltímetro,Multímetro,C
+Electricidad Industrial,¿Qué ley relaciona voltaje corriente y resistencia?,Ley de Faraday,Ley de Joule,Ley de Ohm,Ley de Newton,C
+Electricidad Industrial,¿Cuál es la función de un interruptor termomagnético?,Medir corriente,Proteger contra sobrecargas y cortocircuitos,Regular voltaje,Almacenar energía,B
+Electricidad Industrial,¿Qué tipo de corriente se usa comúnmente en la industria?,Corriente continua,Corriente alterna,Corriente mixta,Corriente estática,B
+Electricidad Industrial,¿Qué color identifica el conductor de tierra?,Rojo,Negro,Azul,Verde/amarillo,D
+Electricidad Industrial,¿Qué dispositivo convierte energía eléctrica en mecánica?,Transformador,Motor eléctrico,Generador,Rectificador,B
+Electricidad Industrial,¿Cuál es la función de un transformador?,Aumentar corriente,Disminuir resistencia,Modificar niveles de voltaje,Convertir AC a DC,C
+Electricidad Industrial,¿Qué significa IP en un motor eléctrico?,Índice de potencia,Grado de protección,Intensidad de fase,Identificación de polos,B
+Electricidad Industrial,¿Cuál es el riesgo principal de un cortocircuito?,Bajo voltaje,Sobrecalentamiento e incendio,Pérdida de energía,Fallo mecánico,B
+Electricidad Industrial,¿Qué es un contactor?,Un sensor,Un interruptor automático de potencia,Un fusible,Un relé térmico,B
+Electricidad Industrial,¿Para qué sirve un relé térmico?,Medir temperatura,Proteger motores de sobrecarga,Controlar voltaje,Aumentar potencia,B
+Electricidad Industrial,¿Qué instrumento mide resistencia eléctrica?,Voltímetro,Amperímetro,Ohmímetro,Frecuencímetro,C
+Electricidad Industrial,¿Qué es la puesta a tierra?,Conectar fases,Eliminar voltaje,Derivar corrientes de falla a tierra,Aumentar potencia,C
+Electricidad Industrial,¿Qué tipo de motor es más usado en la industria?,Motor DC,Motor síncrono,Motor asíncrono trifásico,Motor paso a paso,C
+Electricidad Industrial,¿Qué significa kW?,Kilovoltio,Kilowatt,Kilohmio,Kilocoulomb,B
+Electricidad Industrial,¿Qué protege un fusible?,Sobrecarga eléctrica,Falta de voltaje,Fallo mecánico,Ruido eléctrico,A
+Electricidad Industrial,¿Qué es un tablero eléctrico?,Una máquina,Un sistema de control y distribución,Un motor,Un sensor,B
+Electricidad Industrial,¿Qué frecuencia se usa en Perú?,50 Hz,60 Hz,40 Hz,55 Hz,B
+Electricidad Industrial,¿Qué es un PLC?,Motor,Controlador lógico programable,Sensor,Transformador,B
+Electricidad Industrial,¿Qué significa AC?,Alta corriente,Alternating Current,Amperaje continuo,Corriente activa,B
+Electricidad Industrial,¿Qué significa DC?,Direct Current,Doble circuito,Descarga continua,Corriente dinámica,A
+Electricidad Industrial,¿Qué material es buen conductor eléctrico?,Plástico,Cobre,Madera,Vidrio,B
+Electricidad Industrial,¿Cuál es la función del neutro?,Conducir fallas,Cerrar circuito,Aumentar potencia,Aislar fases,B
+Electricidad Industrial,¿Qué elemento abre y cierra circuitos automáticamente?,Fusible,Interruptor,Relé,Cable,C
+Electricidad Industrial,¿Qué mide un multímetro?,Solo voltaje,Solo corriente,Varias magnitudes eléctricas,Frecuencia únicamente,C
+Electricidad Industrial,¿Qué es una sobrecarga?,Falta de energía,Exceso de corriente,Bajo voltaje,Circuito abierto,B
+Electricidad Industrial,¿Qué es un circuito cerrado?,No hay corriente,La corriente fluye,Circuito dañado,Sin fuente,B
+Electricidad Industrial,¿Qué equipo protege al operador?,Motor,EPP,Tablero,Sensor,B
+Soldadura Universal,¿Qué proceso usa electrodo revestido?,MIG,TIG,SMAW,Oxigas,C
+Soldadura Universal,¿Qué gas se usa en soldadura MIG?,Oxígeno,Argón,Acetileno,Nitrógeno,B
+Soldadura Universal,¿Cuál es el EPP básico del soldador?,Guantes y careta,Zapatos deportivos,Gorro,Mascarilla simple,A
+Soldadura Universal,¿Qué tipo de corriente usa SMAW?,AC o DC,Solo AC,Solo DC,Trifásica,A
+Soldadura Universal,¿Qué función cumple el electrodo?,Aislar,Aportar material,Enfriar,Medir corriente,B
+Soldadura Universal,¿Qué soldadura usa gas protector y electrodo no consumible?,MIG,TIG,SMAW,Arco sumergido,B
+Soldadura Universal,¿Qué metal es más fácil de soldar?,Aluminio,Acero al carbono,Titanio,Cobre,B
+Soldadura Universal,¿Qué posición es plana?,1G,2G,3G,4G,A
+Soldadura Universal,¿Qué causa porosidad en la soldadura?,Exceso de amperaje,Contaminación,Buen gas,Limpieza correcta,B
+Soldadura Universal,¿Qué equipo regula la corriente?,Electrodo,Fuente de poder,Pinza,Careta,B
+Soldadura Universal,¿Qué significa MIG?,Metal Inert Gas,Manual Inert Gas,Mixed Industrial Gas,Metal Industrial Ground,A
+Soldadura Universal,¿Qué gas se usa en oxicorte?,Argón,Helio,Acetileno,CO2,C
+Soldadura Universal,¿Qué defecto es una grieta?,Aceptable,Crítico,Estético,Normal,B
+Soldadura Universal,¿Qué electrodo es común en acero?,E6013,E7018,E308,E309,A
+Soldadura Universal,¿Qué significa TIG?,Tungsten Inert Gas,Thermal Inert Gas,Technical Inert Gas,Total Inert Gas,A
+Soldadura Universal,¿Qué protege la careta?,Manos,Pies,Vista y rostro,Oídos,C
+Soldadura Universal,¿Qué es el arco eléctrico?,Descarga eléctrica controlada,Cortocircuito,Explosión,Llama,A
+Soldadura Universal,¿Qué metal requiere mayor limpieza?,Acero,Hierro,Aluminio,Fundición,C
+Soldadura Universal,¿Qué soldadura es semiautomática?,SMAW,MIG,Oxigas,Forja,B
+Soldadura Universal,¿Qué electrodo es de bajo hidrógeno?,E6011,E6013,E7018,E308,C
+Soldadura Universal,¿Qué defecto ocurre por baja penetración?,Grieta,Falta de fusión,Porosidad,Socavado,B
+Soldadura Universal,¿Qué controla el amperaje?,Penetración,Color,Gas,Ruido,A
+Soldadura Universal,¿Qué se usa para limpiar escoria?,Cepillo de acero,Lija,Trapo,Martillo,A
+Soldadura Universal,¿Qué soldadura usa CO2?,TIG,MIG,SMAW,Oxigas,B
+Soldadura Universal,¿Qué es un cordón?,Corte,Depósito de soldadura,Grieta,Defecto,B
+Soldadura Universal,¿Qué riesgo es común?,Descarga eléctrica,Resfriado,Dolor muscular,Ruido,A
+Soldadura Universal,¿Qué posición es sobrecabeza?,1G,2G,3G,4G,D
+Soldadura Universal,¿Qué elemento sujeta la pieza?,Pinza de masa,Electrodo,Careta,Guantes,A
+Soldadura Universal,¿Qué metal se suelda con TIG?,Plástico,Aluminio,Madera,Vidrio,B
+Mecánica de Mantenimiento,¿Qué es mantenimiento preventivo?,Reparar fallas,Evitar fallas,Cambiar equipos,Parar máquinas,B
+Mecánica de Mantenimiento,¿Qué herramienta mide diámetros?,Regla,Calibrador Vernier,Martillo,Llave,B
+Mecánica de Mantenimiento,¿Qué lubricante reduce fricción?,Agua,Aceite,Arena,Alcohol,B
+Mecánica de Mantenimiento,¿Qué es un rodamiento?,Eje,Elemento de soporte y giro,Polea,Engranaje,B
+Mecánica de Mantenimiento,¿Qué tipo de mantenimiento corrige fallas?,Preventivo,Predictivo,Correctivo,Autónomo,C
+Mecánica de Mantenimiento,¿Qué herramienta ajusta tuercas?,Destornillador,Llave,Alicate,Martillo,B
+Mecánica de Mantenimiento,¿Qué es alineación?,Lubricar,Ajustar ejes,Cortar,Soldar,B
+Mecánica de Mantenimiento,¿Qué es un engranaje?,Elemento eléctrico,Transmisión mecánica,Sensor,Rodamiento,B
+Mecánica de Mantenimiento,¿Qué mide un micrómetro?,Peso,Longitud precisa,Velocidad,Temperatura,B
+Mecánica de Mantenimiento,¿Qué es desgaste?,Rotura,Pérdida de material,Ajuste,Lubricación,B
+Mecánica de Mantenimiento,¿Qué sistema transmite potencia?,Eje,Correas y poleas,Tornillos,Resortes,B
+Mecánica de Mantenimiento,¿Qué herramienta corta metal?,Martillo,Sierra,Llave,Alicate,B
+Mecánica de Mantenimiento,¿Qué es vibración excesiva?,Normal,Falla potencial,Buena señal,Lubricación correcta,B
+Mecánica de Mantenimiento,¿Qué es mantenimiento predictivo?,Basado en tiempo,Basado en condición,Correctivo,Manual,B
+Mecánica de Mantenimiento,¿Qué se usa para medir temperatura?,Regla,Termómetro,Micrómetro,Calibrador,B
+Mecánica de Mantenimiento,¿Qué es un eje?,Elemento fijo,Elemento giratorio,Sensor,Motor,B
+Mecánica de Mantenimiento,¿Qué causa falla mecánica?,Lubricación adecuada,Desgaste,Mantenimiento,Alineación correcta,B
+Mecánica de Mantenimiento,¿Qué herramienta golpea?,Llave,Martillo,Alicate,Sierra,B
+Mecánica de Mantenimiento,¿Qué es una polea?,Rodamiento,Elemento de transmisión,Sensor,Motor,B
+Mecánica de Mantenimiento,¿Qué reduce vibraciones?,Desbalance,Balanceo,Desgaste,Fricción,B
+Mecánica de Mantenimiento,¿Qué es torque?,Velocidad,Fuerza de giro,Temperatura,Potencia eléctrica,B
+Mecánica de Mantenimiento,¿Qué elemento fija piezas?,Lubricante,Tornillo,Aceite,Rodamiento,B
+Mecánica de Mantenimiento,¿Qué es mantenimiento autónomo?,Solo técnicos,Operador participa,Correctivo,Externo,B
+Mecánica de Mantenimiento,¿Qué herramienta aprieta tornillos?,Martillo,Destornillador,Sierra,Alicate,B
+Mecánica de Mantenimiento,¿Qué es corrosión?,Lubricación,Oxidación del metal,Ajuste,Corte,B
+Mecánica de Mantenimiento,¿Qué protege al técnico?,Herramientas,EPP,Máquina,Lubricante,B
+Mecánica de Mantenimiento,¿Qué es una falla?,Operación normal,Pérdida de función,Mejora,Ajuste,B
+Mecánica de Mantenimiento,¿Qué mide un tacómetro?,Voltaje,Velocidad de rotación,Temperatura,Presión,B
+Mecánica de Mantenimiento,¿Qué reduce desgaste?,Fricción,Lubricación,Golpes,Carga,B
+Mecánica de Mantenimiento,¿Qué es mantenimiento industrial?,Producción,Conservación de equipos,Venta,Diseño,B

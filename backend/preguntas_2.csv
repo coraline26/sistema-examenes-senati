@@ -1,0 +1,30 @@
+tipo_examen,pregunta,opcion_a,opcion_b,opcion_c,opcion_d,respuesta_correcta
+Electricidad Industrial,¿Cuál es la unidad de medida de la corriente eléctrica?,Voltio,Ohmio,Amperio,Watt,C
+Electricidad Industrial,¿Qué instrumento se utiliza para medir voltaje?,Amperímetro,Ohmímetro,Voltímetro,Multímetro,C
+Electricidad Industrial,¿Qué ley relaciona voltaje corriente y resistencia?,Ley de Faraday,Ley de Joule,Ley de Ohm,Ley de Newton,C
+Electricidad Industrial,¿Cuál es la función de un interruptor termomagnético?,Medir corriente,Proteger contra sobrecargas y cortocircuitos,Regular voltaje,Almacenar energía,B
+Electricidad Industrial,¿Qué tipo de corriente se usa comúnmente en la industria?,Corriente continua,Corriente alterna,Corriente mixta,Corriente estática,B
+Electricidad Industrial,¿Qué color identifica el conductor de tierra?,Rojo,Negro,Azul,Verde/amarillo,D
+Electricidad Industrial,¿Qué dispositivo convierte energía eléctrica en mecánica?,Transformador,Motor eléctrico,Generador,Rectificador,B
+Electricidad Industrial,¿Cuál es la función de un transformador?,Aumentar corriente,Disminuir resistencia,Modificar niveles de voltaje,Convertir AC a DC,C
+Electricidad Industrial,¿Qué significa IP en un motor eléctrico?,Índice de potencia,Grado de protección,Intensidad de fase,Identificación de polos,B
+Electricidad Industrial,¿Cuál es el riesgo principal de un cortocircuito?,Bajo voltaje,Sobrecalentamiento e incendio,Pérdida de energía,Fallo mecánico,B
+Electricidad Industrial,¿Qué es un contactor?,Un sensor,Un interruptor automático de potencia,Un fusible,Un relé térmico,B
+Electricidad Industrial,¿Para qué sirve un relé térmico?,Medir temperatura,Proteger motores de sobrecarga,Controlar voltaje,Aumentar potencia,B
+Electricidad Industrial,¿Qué instrumento mide resistencia eléctrica?,Voltímetro,Amperímetro,Ohmímetro,Frecuencímetro,C
+Electricidad Industrial,¿Qué es la puesta a tierra?,Conectar fases,Eliminar voltaje,Derivar corrientes de falla a tierra,Aumentar potencia,C
+Electricidad Industrial,¿Qué tipo de motor es más usado en la industria?,Motor DC,Motor síncrono,Motor asíncrono trifásico,Motor paso a paso,C
+Electricidad Industrial,¿Qué significa kW?,Kilovoltio,Kilowatt,Kilohmio,Kilocoulomb,B
+Electricidad Industrial,¿Qué protege un fusible?,Sobrecarga eléctrica,Falta de voltaje,Fallo mecánico,Ruido eléctrico,A
+Electricidad Industrial,¿Qué es un tablero eléctrico?,Una máquina,Un sistema de control y distribución,Un motor,Un sensor,B
+Electricidad Industrial,¿Qué frecuencia se usa en Perú?,50 Hz,60 Hz,40 Hz,55 Hz,B
+Electricidad Industrial,¿Qué es un PLC?,Motor,Controlador lógico programable,Sensor,Transformador,B
+Electricidad Industrial,¿Qué significa AC?,Alta corriente,Alternating Current,Amperaje continuo,Corriente activa,B
+Electricidad Industrial,¿Qué significa DC?,Direct Current,Doble circuito,Descarga continua,Corriente dinámica,A
+Electricidad Industrial,¿Qué material es buen conductor eléctrico?,Plástico,Cobre,Madera,Vidrio,B
+Electricidad Industrial,¿Cuál es la función del neutro?,Conducir fallas,Cerrar circuito,Aumentar potencia,Aislar fases,B
+Electricidad Industrial,¿Qué elemento abre y cierra circuitos automáticamente?,Fusible,Interruptor,Relé,Cable,C
+Electricidad Industrial,¿Qué mide un multímetro?,Solo voltaje,Solo corriente,Varias magnitudes eléctricas,Frecuencia únicamente,C
+Electricidad Industrial,¿Qué es una sobrecarga?,Falta de energía,Exceso de corriente,Bajo voltaje,Circuito abierto,B
+Electricidad Industrial,¿Qué es un circuito cerrado?,No hay corriente,La corriente fluye,Circuito dañado,Sin fuente,B
+Electricidad Industrial,¿Qué equipo protege al operador?,Motor,EPP,Tablero,Sensor,B
