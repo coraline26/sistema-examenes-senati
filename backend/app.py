@@ -31,11 +31,11 @@ from models import (
 )
 from database import get_connection
 
+app.config["JWT_SECRET_KEY"] = "una-clave-super-larga-y-segura-de-mas-de-32-caracteres"
+#app.config["JWT_SECRET_KEY"] = "super-clave-secreta-123"
 
 CORS(app)
 
-app.config["JWT_SECRET_KEY"] = "una-clave-super-larga-y-segura-de-mas-de-32-caracteres"
-#app.config["JWT_SECRET_KEY"] = "super-clave-secreta-123"
 jwt = JWTManager(app)
 
 # ------------------------

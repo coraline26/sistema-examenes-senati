@@ -1,12 +1,13 @@
 const API = window.location.origin;
 
 // ---------------- PROTECCIÓN DE RUTAS ----------------
+// Corregido: Ahora busca las rutas de Flask (/examen y /admin_panel) en lugar de archivos .html
 if (
-    (location.pathname.includes("admin.html") ||
-     location.pathname.includes("examen.html")) &&
+    (window.location.pathname === "/admin_panel" || 
+     window.location.pathname === "/examen") && 
     !localStorage.getItem("token")
 ) {
-    window.location = "index.html";
+    window.location.href = "/";
 }
 
 // ---------------- LOGIN ----------------
@@ -49,7 +50,7 @@ async function login() {
     localStorage.setItem("token", data.token);
     localStorage.setItem("carrera", data.carrera);
 
-    // 🔁 REDIRECCIÓN SEGÚN ROL
+    // 🔁 REDIRECCIÓN SEGÚN ROL (Corregido a rutas de Flask)
     if (data.carrera === "ADMIN") {
         window.location.href = "/admin_panel";
     } else {
@@ -77,8 +78,11 @@ async function cargarExamen() {
         return;
     }
 
-    document.getElementById("titulo").innerText =
-        `Carrera: ${data.carrera} | Preguntas: ${data.total}`;
+    // Asegúrate de que el ID "titulo" exista en tu examen.html
+    const tituloDoc = document.getElementById("titulo");
+    if(tituloDoc) {
+        tituloDoc.innerText = `Carrera: ${data.carrera} | Preguntas: ${data.total}`;
+    }
 
     totalPreguntas = data.total;
     respondidas = 0;
@@ -91,21 +95,26 @@ async function cargarExamen() {
 
 // ---------------- PROGRESO ----------------
 function actualizarProgreso(actual, total) {
-    const porcentaje = Math.round((actual / total) * 100);
-    document.getElementById("barraProgreso").style.width = porcentaje + "%";
+    const barra = document.getElementById("barraProgreso");
+    if(barra) {
+        const porcentaje = Math.round((actual / total) * 100);
+        barra.style.width = porcentaje + "%";
+    }
 }
 
 // ---------------- PREGUNTAS ----------------
 function mostrarPreguntas(preguntas) {
     const form = document.getElementById("formExamen");
+    if(!form) return;
+    
     form.innerHTML = "";
 
     preguntas.forEach((p, i) => {
         form.innerHTML += `
-        <div class="card card-pregunta">
+        <div class="card card-pregunta mb-3">
             <div class="card-body">
-                <div class="pregunta">${i + 1}. ${p.pregunta}</div>
-                <div class="opciones">
+                <div class="pregunta"><b>${i + 1}. ${p.pregunta}</b></div>
+                <div class="opciones mt-2">
                     ${crearOpcion(p.id, p.opcion_a, "A")}
                     ${crearOpcion(p.id, p.opcion_b, "B")}
                     ${crearOpcion(p.id, p.opcion_c, "C")}
@@ -118,13 +127,16 @@ function mostrarPreguntas(preguntas) {
 
 function crearOpcion(idPregunta, texto, letra) {
     return `
-    <label>
-        <input type="radio"
+    <div class="form-check">
+        <input class="form-check-input" type="radio"
                name="${idPregunta}"
+               id="opt_${idPregunta}_${letra}"
                value="${letra}"
                onchange="marcarRespuesta(${idPregunta})">
-        ${texto}
-    </label>`;
+        <label class="form-check-label" for="opt_${idPregunta}_${letra}">
+            ${letra}) ${texto}
+        </label>
+    </div>`;
 }
 
 function marcarRespuesta(idPregunta) {
@@ -138,6 +150,7 @@ function marcarRespuesta(idPregunta) {
 // ---------------- TEMPORIZADOR ----------------
 function iniciarTemporizador(segundos) {
     const timer = document.getElementById("timer");
+    if(!timer) return;
 
     const intervalo = setInterval(() => {
         let min = Math.floor(segundos / 60);
@@ -159,7 +172,7 @@ function enviarExamen() {
     const token = localStorage.getItem("token");
 
     if (!token) {
-        Swal.fire("Error", "Sesión no válida", "error");
+        alert("Sesión no válida");
         return;
     }
 
@@ -167,13 +180,13 @@ function enviarExamen() {
 
     document.querySelectorAll("input[type=radio]:checked").forEach(r => {
         respuestas.push({
-            id_pregunta: r.name,   // ✅ ahora es ID real
+            id_pregunta: r.name,
             respuesta: r.value
         });
     });
 
     if (respuestas.length < totalPreguntas) {
-        Swal.fire("Atención", "Debes responder todas las preguntas", "warning");
+        alert("Debes responder todas las preguntas");
         return;
     }
 
@@ -188,31 +201,27 @@ function enviarExamen() {
     .then(res => res.json())
     .then(data => {
         if (data.nota !== undefined) {
-            Swal.fire(
-                "🎓 Examen enviado",
-                `Puntaje: ${data.puntaje}/${data.total}<br>Nota final: <b>${data.nota}</b>`,
-                "success"
-            ).then(() => {
-                localStorage.removeItem("token");
-                window.location = "index.html";
-            });
+            alert(`🎓 Examen enviado\nPuntaje: ${data.puntaje}/${data.total}\nNota final: ${data.nota}`);
+            localStorage.removeItem("token");
+            window.location.href = "/";
         } else {
-            Swal.fire("Error", data.mensaje || "Error desconocido", "error");
+            alert(data.mensaje || "Error desconocido");
         }
     })
     .catch(err => {
         console.error(err);
-        Swal.fire("Error", "No se pudo enviar el examen", "error");
+        alert("No se pudo enviar el examen");
     });
 }
 
 // ---------------- LOGOUT ----------------
 function logout() {
     localStorage.removeItem("token");
-    window.location = "index.html";
+    window.location.href = "/";
 }
 
-// ---------------- AUTOLOAD ----------------
-if (location.pathname.includes("examen.html")) {
-    cargarExamen();
+// ---------------- AUTOLOAD (Corregido para Flask) ----------------
+// Se ejecuta cargarExamen() solo si la URL es la del examen
+if (window.location.pathname === "/examen") {
+    document.addEventListener("DOMContentLoaded", cargarExamen);
 }
