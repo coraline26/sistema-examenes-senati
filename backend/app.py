@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
+from flask import render_template
 from flask_jwt_extended import (
     JWTManager,
     create_access_token,
@@ -33,8 +34,8 @@ jwt = JWTManager(app)
 # ------------------------
 @app.route("/")
 def home():
-    return jsonify({"status": "API funcionando correctamente"})
-
+    #return jsonify({"status": "API funcionando correctamente"})
+    return render_template('index.html') # Esto cargará tu archivo de la carpeta templates
 # ------------------------
 # LOGIN
 # ------------------------
