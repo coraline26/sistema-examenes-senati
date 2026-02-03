@@ -323,6 +323,13 @@ def crear_alumno():
 
     return jsonify({"mensaje": "Alumno registrado correctamente"})
 
+@app.route('/examen')
+def mostrar_examen():
+    return render_template('examen.html')
+
+@app.route('/admin_panel')
+def mostrar_admin():
+    return render_template('admin.html')
 
 # ------------------------
 # MAIN

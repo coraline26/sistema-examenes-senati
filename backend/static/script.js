@@ -51,9 +51,9 @@ async function login() {
 
     // 🔁 REDIRECCIÓN SEGÚN ROL
     if (data.carrera === "ADMIN") {
-        window.location.href = "admin.html";
+        window.location.href = "/admin_panel";
     } else {
-        window.location.href = "examen.html";
+        window.location.href = "/examen";
     }
 }
 
