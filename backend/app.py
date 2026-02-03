@@ -11,6 +11,12 @@ from flask_jwt_extended import (
 import pandas as pd
 import os
 
+# Esto le dice a Flask que busque las carpetas dentro de la carpeta actual
+current_dir = os.path.dirname(os.path.abspath(__file__))
+app = Flask(__name__, 
+            template_folder=os.path.join(current_dir, 'templates'),
+            static_folder=os.path.join(current_dir, 'static'))
+
 from models import (
     obtener_preguntas_aleatorias,
     crear_pregunta,
