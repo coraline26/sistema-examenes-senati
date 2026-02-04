@@ -63,6 +63,11 @@ async function login() {
 let totalPreguntas = 0;
 let respondidas = 0;
 let respondidasSet = new Set();
+let examenIniciado = false;
+let intervaloTiempo = null;
+const TIEMPO_EXAMEN = 45 * 60;
+
+
 
 async function cargarExamen() {
     const token = localStorage.getItem("token");
@@ -84,7 +89,71 @@ async function cargarExamen() {
 
     actualizarProgreso(0, totalPreguntas);
     mostrarPreguntas(data.preguntas);
-    iniciarTemporizador(20 * 60);
+
+    // ❌ NO iniciar temporizador aquí
+    // iniciarTemporizador(45 * 60);
+
+    // Bloquear preguntas hasta empezar
+    document.querySelectorAll("input[type=radio]").forEach(r => r.disabled = true);
+}
+
+
+function empezarExamen() {
+    Swal.fire({
+        title: "Examen de conocimientos",
+        html: `
+            <p>El examen tiene una duración de <b>45 minutos</b>.</p>
+            <p>Una vez iniciado, el tiempo comenzará a correr.</p>
+            <p><b>No podrás pausar el examen.</b></p>
+        `,
+        icon: "info",
+        confirmButtonText: "Empezar examen",
+        allowOutsideClick: false
+    }).then(() => {
+        examenIniciado = true;
+
+        document.querySelectorAll("input[type=radio]").forEach(r => r.disabled = false);
+
+        document.getElementById("btnEmpezar").style.display = "none";
+        document.getElementById("btnEnviar").style.display = "block";
+
+        iniciarTemporizador(TIEMPO_EXAMEN);
+    });
+}
+
+
+function iniciarTemporizador(segundos) {
+    const timer = document.getElementById("timer");
+    if (!timer) return;
+
+    // Evitar doble intervalo
+    if (intervaloTiempo) clearInterval(intervaloTiempo);
+
+    let avisoMostrado = false;
+
+    intervaloTiempo = setInterval(() => {
+        let min = Math.floor(segundos / 60);
+        let seg = segundos % 60;
+
+        timer.innerText =
+            `${min.toString().padStart(2, '0')}:${seg.toString().padStart(2, '0')}`;
+
+        if (segundos === 180 && !avisoMostrado) {
+            avisoMostrado = true;
+            Swal.fire({
+                icon: "warning",
+                title: "¡Atención!",
+                text: "Faltan 3 minutos para terminar el examen",
+                confirmButtonText: "Entendido"
+            });
+        }
+
+        if (segundos <= 0) {
+            clearInterval(intervaloTiempo);
+            enviarExamen();
+        }
+        segundos--;
+    }, 1000);
 }
 
 

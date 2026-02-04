@@ -118,10 +118,23 @@
             </div>
 
             <div class="col-md-4 text-center">
-                <div id="titulo" class="fw-bold"></div>
-                <div class="timer-box mt-1 mx-auto">
-                    ⏱ <span id="timer">20:00</span>
+                <div class="fw-bold">Examen de conocimientos</div>
+                <div class="text-center my-3">
+
+                    <!-- BOTÓN EMPEZAR -->
+                    <button id="btnEmpezar"
+                            onclick="empezarExamen()"
+                            class="btn btn-primary mb-2 shadow">
+                        ▶️ Empezar examen
+                    </button>
+
+                    <!-- CRONÓMETRO -->
+                    <div id="timer" class="timer">
+                        45:00
+                    </div>
+
                 </div>
+
             </div>
 
             <div class="col-md-4 text-end">
@@ -136,17 +149,29 @@
     <!-- PREGUNTAS -->
     <form id="formExamen"></form>
 
-    <!-- BOTÓN ENVIAR -->
-    <button onclick="enviarExamen()" class="btn btn-success btn-enviar shadow">
-        📝 Enviar Examen
+    <!-- BOTÓN EMPEZAR -->
+    <button id="btnEmpezar"
+            onclick="empezarExamen()"
+            class="btn btn-primary btn-enviar shadow">
+        ▶️ Empezar examen
     </button>
+
+    <!-- BOTÓN ENVIAR -->
+    <button id="btnEnviar"
+        onclick="enviarExamen()"
+        class="btn btn-success btn-enviar shadow"
+        style="display:none">
+    📝 Enviar Examen
+    </button>
+
 
 </div>
 </div>
 
 <!-- SCRIPTS -->
+
+
 <script src="{{ url_for('static', filename='script.js') }}"></script>
-<script src="script.js?v=3"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     // Pequeño script de seguridad: si no hay token, lo regresa al login
