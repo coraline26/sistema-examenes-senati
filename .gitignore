@@ -1,0 +1,14 @@
+# Entorno virtual
+venv/
+__pycache__/
+*.pyc
+
+# Base de datos local (QUITAR O COMENTAR LA SIGUIENTE LÍNEA)
+# *.db  <-- Coméntalo con un # adelante
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Reportes generados
+backend/reportes/
