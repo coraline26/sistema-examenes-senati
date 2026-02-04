@@ -78,12 +78,6 @@ async function cargarExamen() {
         return;
     }
 
-    // Asegúrate de que el ID "titulo" exista en tu examen.html
-    const tituloDoc = document.getElementById("titulo");
-    if(tituloDoc) {
-        tituloDoc.innerText = `Carrera: ${data.carrera} | Preguntas: ${data.total}`;
-    }
-
     totalPreguntas = data.total;
     respondidas = 0;
     respondidasSet.clear();
@@ -92,6 +86,7 @@ async function cargarExamen() {
     mostrarPreguntas(data.preguntas);
     iniciarTemporizador(20 * 60);
 }
+
 
 // ---------------- PROGRESO ----------------
 function actualizarProgreso(actual, total) {
